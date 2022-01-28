@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const MONGODB_URI = 'mongodb://127.0.0.1:27017/fruitsTestDB'
+const MONGODB_URI = process.env.MONGO_URI ||'mongodb+srv://PaulPablo:7yhzTZNVUrxFbPF@cluster0.dzipt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
 mongoose.connect(MONGODB_URI)
 const db = mongoose.connection
