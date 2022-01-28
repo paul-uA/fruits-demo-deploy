@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Fruit</title>
+  </head>
+  <body>
+    <h1>Welcome to Fruit App 0.5</h1>
+    <h2>Create a fruit</h2>
+    <!-- Form -->
+    <form action="/fruits" method="POST">
+      <p>Name: <input type="text" name="name" /></p>
+      <p>Color: <input type="text" name="color" /></p>
+      <p>Ready to Eat: <input type="checkbox" name="readyToEat" /></p>
+      <input type="submit" value="create fruit" />
+    </form>
+    <h2>All Fruits</h2>
+    <!-- Iterator -->
+    <ul>
+        <% for(let i=0;i<fruits.length;i++){%>
+            <ol><%=fruits[i].name%></ol>
+        <%}%>
+    </ul>
+  </body>
+</html>
